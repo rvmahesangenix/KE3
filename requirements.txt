@@ -1,5 +1,6 @@
 fastapi
 uvicorn
 transformers
-torch  # Ensure CPU version of PyTorch
-pandas  # For loading CSV data
+torch  # Ensure the CPU version of PyTorch is installed
+pandas  # For reading CSV data
+datasets  # For handling datasets
