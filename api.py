@@ -5,7 +5,7 @@ app = FastAPI()
 
 # Load the fine-tuned model
 model = LlamaForSeq2SeqLM.from_pretrained('./results')  # Path to the fine-tuned model
-tokenizer = LlamaTokenizer.from_pretrained("path/to/giniollama")
+tokenizer = LlamaTokenizer.from_pretrained("/usr/share/ollama/.ollama/models/manifests/registry.ollama.ai/library/giniollama")
 
 @app.post("/generate_sql/")
 async def generate_sql(query: str):

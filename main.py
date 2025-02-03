@@ -9,8 +9,8 @@ df = pd.read_csv("your_dataset.csv")  # Replace with the path to your CSV
 dataset = Dataset.from_pandas(df)
 
 # Initialize the tokenizer and model for fine-tuning
-model = LlamaForSeq2SeqLM.from_pretrained("path/to/giniollama")  # Replace with the path to GinoLLama
-tokenizer = LlamaTokenizer.from_pretrained("path/to/giniollama")
+model = LlamaForSeq2SeqLM.from_pretrained("/usr/share/ollama/.ollama/models/manifests/registry.ollama.ai/library/giniollama")  # Replace with the path to GinoLLama
+tokenizer = LlamaTokenizer.from_pretrained("/usr/share/ollama/.ollama/models/manifests/registry.ollama.ai/library/giniollama")
 
 # Tokenize the inputs and outputs
 def tokenize_function(examples):
