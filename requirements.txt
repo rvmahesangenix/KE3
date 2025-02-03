@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+transformers
+torch  # Ensure CPU version of PyTorch
+pandas  # For loading CSV data

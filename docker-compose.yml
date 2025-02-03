@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  llama-api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - /path/to/default/models:/models  # Mount default models into the container
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    runtime: nvidia
