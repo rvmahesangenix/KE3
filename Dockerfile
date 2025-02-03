@@ -15,4 +15,4 @@ WORKDIR /app
 EXPOSE 8005
 
 # Run FastAPI with Uvicorn
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8005"]
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8005"]
